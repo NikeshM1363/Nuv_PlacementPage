@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Placement Page</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="Place.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light flex-column">
+      <div class="d-flex w-100 justify-content-between align-items-center">
+        <a class="navbar-brand" href="#">
+          <img src="./images/nuv_logo.png" alt="Logo" />
+        </a>
+        <div class="form-inline my-2 my-lg-0 search-container">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search..."
+            aria-label="Search"
+          />
+          <button class="btn btn-search" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse w-100 justify-center" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">School</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Program</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Beyond Books</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Admission</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Students Corner</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('.navbar-toggler').click(function () {
+          $('#navbarNav').collapse('toggle');
+        });
+  
+        $('#navbarNav a').click(function () {
+          $('#navbarNav').collapse('hide');
+        });
+      });
+    </script>
+
+    <!-- Hero Section with Carousel -->
+    <div class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="hero-title">Welcome to University Placement Portal!</h1>
+            <p class="hero-subtitle">Connecting Talent with Opportunity</p>
+          </div>
+          <div class="col-lg-6">
+            <!-- Lottie Animation -->
+            <div class="lottie-container" id="animation"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Include Lottie Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.9/lottie.min.js"></script>
+    <!-- Script to Render Lottie Animation -->
+    <script>
+      var animation = bodymovin.loadAnimation({
+        container: document.getElementById("animation"),
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: "./images/HS.json", // Replace 'HS.json' with the path to your animation JSON file
+      });
+    </script>
+
+    <!-- New Section -->
+    <section class="cdc-section py-5">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-6 main-content">
+                  <h2 class="section-title">Career Development Centre @NUV</h2>
+                  <p>Navrachana University has always remained a preferred destination to hire fresh talent because of its highly professional student quality, industry-aligned curriculum, highly qualified & experienced faculties, Research facilities and strong industry connections.</p>
+                  <p>Navrachana University’s placement process is designed to make recruitment easy and flexible to optimize students’ success. We help students find the right opportunities based on their interests and aptitude and by matching them with recruiting organizations’ requirements.</p>
+                  <p>A thoughtfully designed and carefully nurtured vibrant campus culture ensures that students turn into well-rounded and sought-after professionals, while experiencing some of the best times of their lives.</p>
+                  <p>With more than 500+ national and multinational recruiters on board, NUVites have plenty to choose from, if they don’t become job creators themselves. So, WHEN YOU ARE AT NUV, YOU ARE #WellPlaced</p>
+                  <p>Our commitment to nurturing talent and providing the best opportunities ensures that every student finds the right path to success, whether in the corporate world or as an entrepreneur.</p>
+              </div>
+              <div class="col-md-6">
+                  <h3 class="placement-process-title mb-4">Placement Process</h3>
+                  <div class="placement-process mt-5">
+                      <div class="cards">
+                          <div class="card yellow">
+                              <div class="card-body text-center">
+                                  <h5 class="card-title">Step 1: Training, Expert Talks, Placement Orientation</h5>
+                              </div>
+                          </div>
+                          <div class="card red">
+                              <div class="card-body text-center">
+                                  <h5 class="card-title">Step 2: Placement Cell Invite Companies for Campus Placements</h5>
+                              </div>
+                          </div>
+                          <div class="card yellow">
+                              <div class="card-body text-center">
+                                  <h5 class="card-title">Step 3: Placement Cell shares opportunities with students</h5>
+                              </div>
+                          </div>
+                          <div class="card red">
+                              <div class="card-body text-center">
+                                  <h5 class="card-title">Step 4: Interested students apply for the opportunity</h5>
+                              </div>
+                          </div>
+                          <div class="card yellow">
+                              <div class="card-body text-center">
+                                  <h5 class="card-title">Step 5: Pre-Placement Talk and selection process</h5>
+                              </div>
+                          </div>
+                          <div class="card red">
+                              <div class="card-body text-center">
+                                  <h5 class="card-title">Step 6: Selection process based on:</h5>
+                                  <ul class="list-unstyled">
+                                      <li>Aptitude Test</li>
+                                      <li>Psychometric Test</li>
+                                      <li>Group Discussion</li>
+                                      <li>Personal Interview</li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="card yellow">
+                              <div class="card-body text-center">
+                                  <h5 class="card-title">Step 7: Final Selection & Offer Confirmation</h5>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+<!-- Top Recruiters Section -->
+<section class="top-recruiters-section py-5">
+  <div class="container-fluid">
+      <h2 class="section-title text-center mb-4">Top Recruiters</h2>
+      <div id="recruiterCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <div class="row">
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/abb.png" alt="Company 1"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/alembic.png" alt="Company 2"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/asian paints.png" alt="Company 3"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/birla.jpeg" alt="Company 4"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/buyjus.png" alt="Company 5"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/civica.png" alt="Company 6"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/d mart.png" alt="Company 7"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/db.jpeg" alt="Company 8"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/deepak.png" alt="Company 9"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/gorej.jpeg" alt="Company 10"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/hdfc.png" alt="Company 11"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/icici.png" alt="Company 12"></div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="row">
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/infosys.png" alt="Company 13"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/jevio.jpeg" alt="Company 14"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/kotak.png" alt="Company 15"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/L and T.jpeg" alt="Company 16"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/medicart.png" alt="Company 17"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/mg.png" alt="Company 18"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/mrf.png" alt="Company 19"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/paypal.png" alt="Company 20"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/phone pay.png" alt="Company 21"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/piramal.jpg" alt="Company 22"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/tcs.png" alt="Company 23"></div>
+                      <div class="col-6 col-md-4 col-lg-2 recruiter-card"><img src="./images/uci.png" alt="Company 24"></div>
+                  </div>
+              </div>
+              <!-- Add more carousel items as needed -->
+          </div>
+      </div>
+            <!-- Button to trigger modal -->
+            <div class="text-center mt-5">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#recruiterFormModal">
+                  Request For Information
+              </button>
+          </div>
+      </div>
+    
+      <!-- Modal -->
+      <div class="modal fade" id="recruiterFormModal" tabindex="-1" role="dialog" aria-labelledby="recruiterFormModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="recruiterFormModalLabel">Request For Information</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <form>
+                          <div class="form-group">
+                              <label for="recruiterName">Name</label>
+                              <input type="text" class="form-control" id="recruiterName" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="recruiterEmail">Email</label>
+                              <input type="email" class="form-control" id="recruiterEmail" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="recruiterQuery">What Would You Like To Know</label>
+                              <textarea class="form-control" id="recruiterQuery" rows="3" required></textarea>
+                          </div>
+                          <div class="form-group form-check">
+                              <input type="checkbox" class="form-check-input" id="recruiterNotRobot" required>
+                              <label class="form-check-label" for="recruiterNotRobot">I'm not a robot</label>
+                              <!-- Add reCAPTCHA here if needed -->
+                          </div>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <script src="Place.js">
+
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</section>
+<!-- Placement at a Glance Section -->
+<div class="container-fluid mt-5">
+  <h2 class="mb-4 section-title text-center">Placement at a Glance</h2>
+  <div class="row justify-content-center">
+    <!-- No. of Companies Chart -->
+    <div class="col-md-6 col-lg-6 mb-4 d-flex justify-content-center">
+      <div class="chart-container larger">
+        <canvas id="companiesChart"></canvas>
+      </div>
+    </div>
+    <!-- Placed Students Year Wise Donut Chart -->
+    <div class="col-md-6 col-lg-6 mb-4 d-flex justify-content-center">
+      <div class="chart-container larger">
+        <canvas id="studentsDonutChart"></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <!-- Compensation Average (LPA) Chart -->
+    <div class="col-md-6 col-lg-6 mb-4 d-flex justify-content-center">
+      <div class="chart-container larger">
+        <canvas id="avgCompensationChart"></canvas>
+      </div>
+    </div>
+    <!-- Compensation Max (LPA) Chart -->
+    <div class="col-md-6 col-lg-6 mb-4 d-flex justify-content-center">
+      <div class="chart-container larger">
+        <canvas id="maxCompensationChart"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Data for the charts
+  const labels = ["2017-18", "2018-19", "2019-20", "2020-21", "2021-22", "2022-23"];
+  
+  const companiesData = [50, 97, 87, 162, 260];
+  const studentsData = [76, 103, 135, 124, 161, 221];
+  const avgCompensationData = [2.53, 2.56, 2.57, 2.26, 2.7, 3.25];
+  const maxCompensationData = [10, 10, 12, 6.4, 7, 34.6];
+
+  // Chart configurations
+  const config = (type, label, data, backgroundColor, borderColor, yMax) => {
+    return {
+      type: type,
+      data: {
+        labels: labels,
+        datasets: [{
+          label: label,
+          data: data,
+          borderColor: borderColor,
+          backgroundColor: backgroundColor,
+          fill: true,
+          tension: 0.1
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: yMax,
+            grid: {
+              display: false
+            }
+          },
+          x: {
+            grid: {
+              display: false
+            }
+          }
+        }
+      }
+    };
+  };
+
+  // Initialize the charts
+  new Chart(document.getElementById('companiesChart'), config('bar', 'No. of Companies', companiesData, '#bd171e', '#f1e328', 300));
+  new Chart(document.getElementById('studentsDonutChart'), config('doughnut', 'Placed Students Year Wise', studentsData, ['#bd171e', '#1e72bd', '#f1e328', '#00FF00', '#FFA500', '#FF5733'], '#f1e328', 250));
+  new Chart(document.getElementById('avgCompensationChart'), config('line', 'Compensation Avg (LPA)', avgCompensationData, '#bd171e', '#f1e328', 3.5));
+  new Chart(document.getElementById('maxCompensationChart'), config('bar', 'Compensation Max (LPA)', maxCompensationData, '#bd171e', '#f1e328', 40));
+
+</script>
+
+
+<!-- Testimonials Section -->
+<section class="testimonial-section py-5">
+  <div class="container-fluid">
+    <h2 class="section-title">Testimonials</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-4 mb-4">
+        <div class="card testimonial-card main-card">
+          <img src="./images/test high.jpg" class="card-img-top" alt="Main Person">
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-3 mb-4">
+        <div class="card testimonial-card">
+          <img src="./images/test 2.jpeg" class="card-img-top" alt="Person 1">
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card testimonial-card">
+          <img src="./images/test 3.jpeg" class="card-img-top" alt="Person 2">
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card testimonial-card">
+          <img src="./images/test 4.jpeg" class="card-img-top" alt="Person 3">
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card testimonial-card">
+          <img src="./images/test.jpeg" class="card-img-top" alt="Person 4">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = {
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          } else {
+            entry.target.classList.remove('animate');
+          }
+        });
+      }, observerOptions);
+
+      const mainCard = document.querySelector('.testimonial-card.main-card');
+      const otherCards = document.querySelectorAll('.testimonial-card:not(.main-card)');
+
+      observer.observe(mainCard);
+      otherCards.forEach(card => {
+        observer.observe(card);
+      });
+    });
+  </script>
+</section>
+
+
+
+<!-- Team Members Section -->
+    <section class="team-section py-5">
+      <div class="container-fluid">
+        <h2 class="section-title">Meet the NUV Career Development Centre Team</h2>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 text-center">
+            <div class="team-member">
+              <img src="./images/milind-1.jpg" class="img-fluid" alt="Milind Ruparel" />
+              <h4>Milind Ruparel</h4>
+              <p>Head – Career Development Centre</p>
+              <p>0265 2617282</p>
+              <p><a href="mailto:placement@nuv.ac.in">placement@nuv.ac.in</a></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center">
+            <div class="team-member">
+              <img src="./images/Vaibhavi.jpg" class="img-fluid" alt="Vaibhavi Choughule" />
+              <h4>Vaibhavi Choughule</h4>
+              <p>Executive – Career Development Centre</p>
+              <p>0265 2617283</p>
+              <p><a href="mailto:vaibhavi.choughule@nuv.ac.in">vaibhavi.choughule@nuv.ac.in</a></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center">
+            <div class="team-member">
+              <img src="./images/Sonali.jpg" class="img-fluid" alt="Sonali Patel" />
+              <h4>Sonali Patel</h4>
+              <p>Assistant – Career Development Centre</p>
+              <p>0265 2617283</p>
+              <p><a href="mailto:sonali.patel@nuv.ac.in">sonali.patel@nuv.ac.in</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Activity section -->
+    <section class="activities-section py-5">
+      <div class="container-fluid">
+        <h2 class="section-title text-center mb-5">Activities</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="activity-card">
+              <img src="./images/MOU.jpg" class="img-fluid" alt="MOU with MG Nurture for Skill Development" />
+              <div class="activity-text">MOU with MG Nurture for Skill Development</div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="activity-card">
+              <img src="./images/Expert talk.jpg" class="img-fluid" alt="Expert Talk by Haver & Boecker" />
+              <div class="activity-text">Expert Talk by Haver & Boecker</div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="activity-card">
+              <img src="./images/Mock Interviews.jpg" class="img-fluid" alt="Mock Interviews" />
+              <div class="activity-text">Mock Interviews</div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="activity-card">
+              <img src="./images/seminar.jpg" class="img-fluid" alt="Seminar on Career Opportunity with Infosys" />
+              <div class="activity-text">Seminar on Career Opportunity with Infosys</div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="activity-card">
+              <img src="./images/odaysseys.jpg" class="img-fluid" alt="Odysseus Solutions Expert Session" />
+              <div class="activity-text">Odysseus Solutions Expert Session</div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="activity-card">
+              <img src="./images/plcamenet.jpg" class="img-fluid" alt="Placement Orientation Session" />
+              <div class="activity-text">Placement Orientation Session</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="Place.js"></script>
+
+
+
+   <!-- Footer Section -->
+   <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-3">
+                <h5 class="quick-links">QUICK LINKS</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Library | Admissions</a></li>
+                    <li><a href="#">In The Press</a></li>
+                    <li><a href="#">Research | Tenders</a></li>
+                    <li><a href="#">Privacy Policy | Terms and Conditions</a></li>
+                    <li><a href="#">Online Payment Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <h5 class="navrachana-university">NAVRACHANA UNIVERSITY</h5>
+                <address>
+                    Vasna-Bhayli Road,<br />
+                    Vadodara - 391 410<br />
+                    Gujarat, India<br />
+                    Phone: +91-265-2617000, 100<br />
+                    Mail: <a href="mailto:nuv@nuv.ac.in">nuv@nuv.ac.in</a>
+                </address>
+                <div class="social-icons">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <h5>Contact</h5>
+                <p>Admission Inquiry: +91-9998345470</p>
+                <p>Placement Cell: +91-9316988277</p>
+                <p>Accounts Dept: +91-265-2617144</p>
+                <p>HR Dept: +91-265-2617103</p>
+                <p>WhatsApp: +91-9327843239</p>
+                <p>Working Hours: 9am-5pm (Mon-Sat)</p>
+                <a href="#">University Directory</a>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <h5>Location</h5>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.435241791379!2d73.1618!3d22.2858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc979c23ee7d9%3A0xc1d14bb456e0f2ea!2sNavrachana%20University!5e0!3m2!1sen!2sin!4v1689153554147!5m2!1sen!2sin"
+                    width="100%"
+                    height="200"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                ></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center py-2 mt-3">
+        <hr style="border-top: 1px solid #fff;" />
+        <p class="mb-0">
+            Copyright © 2024 by Navrachana University. All rights reserved.
+        </p>
+        <p>
+            Designed, developed, and maintained by Akshar Softweb Pvt. Ltd.
+        </p>
+    </div>
+</footer>
+
+  </body>
+</html>
